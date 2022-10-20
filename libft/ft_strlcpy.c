@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 
 	i = 0;
-	if (!dest || !len)
+	if (!dst || !src)
 		return (0);
 	src_len = ft_strlen(src);
 	if (!dstsize)
@@ -30,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	if (dstsize < src_len)
 		dst[dstsize - 1] = '\0';
-	else if (destsize != '\0')
-			dest[i] = '\0';
+	else if (dstsize != '\0')
+			dst[i] = '\0';
 	return (src_len);
 }
